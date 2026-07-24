@@ -20,10 +20,10 @@ module.exports = (sequelize, DataTypes) => {
     });
  
     Courses.associate = function(models) {
-        // Courses.hasMany(models.Groups, {
-        //     foreignKey: 'course_id',
-        //     as: 'Groups',
-        // });
+        Courses.hasMany(models.Groups, {
+            foreignKey: 'course_id',
+            as: 'Groups',
+        });
     };
 
     return Courses;

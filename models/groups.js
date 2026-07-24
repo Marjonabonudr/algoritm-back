@@ -44,10 +44,10 @@ module.exports = (sequelize, DataTypes) => {
     });
  
     Groups.associate = function(models) {
-        // Groups.belongsTo(models.Courses, {
-        //     foreignKey: 'course_id',
-        //     as: 'Courses',
-        // });
+        Groups.belongsTo(models.Courses, {
+            foreignKey: 'course_id',
+            as: 'Courses',
+        });
         // Groups.belongsTo(models.Teachers, {
         //     foreignKey: 'teacher_id',
         //     as: 'Teachers',
@@ -56,10 +56,10 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'room_id',
             as: 'Rooms',
         });
-        // Groups.hasMany(models.Schedules, {
-        //     foreignKey: 'group_id',
-        //     as: 'Schedules',
-        // });
+        Groups.hasMany(models.Schedules, {
+            foreignKey: 'group_id',
+            as: 'Schedules',
+        });
     };
 
     return Groups;
