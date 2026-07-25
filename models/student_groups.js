@@ -26,6 +26,16 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         }
     })
+    StudentGroups.associate = function(models) {
+        StudentGroups.belongsTo(models.Students, {
+            foreignKey: 'student_id',
+            as: 'Students',
+        });
+        StudentGroups.belongsTo(models.Groups, {
+            foreignKey: 'group_id',
+            as: 'Groups',
+        });
+    };
 
     return StudentGroups;
 }

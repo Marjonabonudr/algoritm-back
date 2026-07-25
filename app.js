@@ -15,6 +15,9 @@ const Schedules = require('./routes/schedules.Route');
 const Students = require('./routes/students.Route');
 const Teachers = require('./routes/teachers.Route');
 const Attendance = require('./routes/attendance.Route');
+const StudentGroups = require('./routes/student_groups.Route');
+const StudentTransfer = require('./routes/student_transfer.Route');
+const Parents = require('./routes/parents.Route');
 
 
 
@@ -29,10 +32,6 @@ app.use(
     })
 );
 
-app.get('/', (req, res) => {
-    res.redirect('/swagger');
-});
-
 
 
 app.use('/api', Roles);
@@ -45,6 +44,9 @@ app.use('/api', Schedules);
 app.use('/api', Students);
 app.use('/api', Teachers);
 app.use('/api', Attendance);
+app.use('/api', StudentGroups);
+app.use('/api', StudentTransfer);
+app.use('/api', Parents);
 
 
 
