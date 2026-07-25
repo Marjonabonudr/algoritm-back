@@ -29,6 +29,10 @@ app.use(
     })
 );
 
+app.get('/', (req, res) => {
+    res.redirect('/swagger');
+});
+
 
 
 app.use('/api', Roles);
