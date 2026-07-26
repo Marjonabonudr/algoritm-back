@@ -27,23 +27,23 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
-    Student_transfer.associate = function(models) {
-        Student_transfer.belongsTo(models.Students, { 
+    StudentTransfer.associate = function(models) {
+        StudentTransfer.belongsTo(models.Students, { 
             foreignKey: 'student_id', 
             as: 'student' 
         });
 
-        Student_transfer.belongsTo(models.Teachers, { 
+        StudentTransfer.belongsTo(models.Teachers, { 
             foreignKey: 'old_teacher', 
             as: 'oldTeacher' 
         });
         
-        Student_transfer.belongsTo(models.Teachers, { 
+        StudentTransfer.belongsTo(models.Teachers, { 
             foreignKey: 'new_teacher', 
             as: 'newTeacher' 
         });
     };
 
-    return Student_transfer;
+    return StudentTransfer;
 
 }

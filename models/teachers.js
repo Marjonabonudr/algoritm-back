@@ -40,11 +40,11 @@ module.exports = (sequelize, DataTypes) => {
         });
 
 
-        // Teachers.hasMany(models.Student_transfer, { 
+        // Teachers.hasMany(models.StudentTransfer, { 
         //     foreignKey: 'old_teacher', 
         //     as: 'oldTransfers' 
         // });
-        // Teachers.hasMany(models.Student_transfer, { 
+        // Teachers.hasMany(models.StudentTransfer, { 
         //     foreignKey: 'new_teacher', 
         //     as: 'newTransfers' 
         // });

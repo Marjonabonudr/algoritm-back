@@ -54,7 +54,7 @@ module.exports = (sequelize, DataTypes) => {
         //     foreignKey: 'student_id', 
         //     as: 'studentGroups' 
         // });
-        // Students.hasMany(models.student_transfer, { 
+        // Students.hasMany(models.studentTransfer, { 
         //     foreignKey: 'student_id', 
         //     as: 'transfers' 
         // });
