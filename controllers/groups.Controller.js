@@ -35,7 +35,7 @@ exports.getGroupsById = async (req, res) => {
         const groups = await Groups.findByPk(req.params.id,{
             include: [
                 {model: Courses, as: 'Courses'},
-                // {model: Teachers, as: 'Teachers'},
+                {model: Teachers, as: 'Teachers'},
                 {model: Rooms, as: 'Rooms'}
             ]
         });

@@ -14,6 +14,13 @@ const Attendance = require('./attendance')(sequelize, Sequelize.DataTypes)
 const StudentGroups = require('./student_groups')(sequelize, Sequelize.DataTypes)
 const StudentTransfer = require('./student_transfer')(sequelize, Sequelize.DataTypes)
 const Parents = require('./parents')(sequelize, Sequelize.DataTypes)
+const Call_logs = require('./call_logs')(sequelize, Sequelize.DataTypes)
+const Ratings = require('./ratings')(sequelize, Sequelize.DataTypes)
+const Payments = require('./payments')(sequelize, Sequelize.DataTypes)
+const Lessons = require('./lessons')(sequelize, Sequelize.DataTypes)
+const Discounts = require('./discounts')(sequelize, Sequelize.DataTypes)
+const Grants = require('./grants')(sequelize, Sequelize.DataTypes)
+const Finance_accounts = require('./finance_accounts')(sequelize, Sequelize.DataTypes)
 
 
 Roles.associate(sequelize.models);
@@ -29,6 +36,13 @@ Attendance.associate(sequelize.models);
 StudentGroups.associate(sequelize.models);
 StudentTransfer.associate(sequelize.models);    
 Parents.associate(sequelize.models);
+Call_logs.associate(sequelize.models);
+Ratings.associate(sequelize.models);
+Payments.associate(sequelize.models);
+Lessons.associate(sequelize.models);
+Discounts.associate(sequelize.models);
+Grants.associate(sequelize.models);
+Finance_accounts.associate(sequelize.models);
 
 
 
@@ -47,5 +61,12 @@ module.exports = {
     Attendance,
     StudentGroups,
     StudentTransfer,
-    Parents
+    Parents,
+    Call_logs,
+    Ratings,
+    Payments,
+    Lessons,
+    Discounts,
+    Grants,
+    Finance_accounts
 }

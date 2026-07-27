@@ -18,7 +18,13 @@ const Attendance = require('./routes/attendance.Route');
 const StudentGroups = require('./routes/student_groups.Route');
 const StudentTransfer = require('./routes/student_transfer.Route');
 const Parents = require('./routes/parents.Route');
-
+const Call_logs = require('./routes/call_logs.Route');
+const Ratings = require('./routes/ratings.Route');
+const Payments = require('./routes/payments.Route');
+const Lessons = require('./routes/lesson.Route');
+const Discounts = require('./routes/discount.Route');
+const Grants = require('./routes/grants.Route');
+const Finance_accounts = require('./routes/finance_accounts.Route');
 
 
 dotenv.config();
@@ -47,6 +53,13 @@ app.use('/api', Attendance);
 app.use('/api', StudentGroups);
 app.use('/api', StudentTransfer);
 app.use('/api', Parents);
+app.use('/api', Call_logs);
+app.use('/api', Ratings);
+app.use('/api', Payments);
+app.use('/api', Lessons);
+app.use('/api', Discounts);
+app.use('/api', Grants);
+app.use('/api', Finance_accounts);
 
 
 
