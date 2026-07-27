@@ -41,7 +41,7 @@ const student_transferController = require('../controllers/student_transfer.Cont
  *       '500':
  *         description: Server error
  */
-router.post('/student_transfer', student_transferController.createStudent_transfer);
+router.post('/student_transfer', student_transferController.createStudentTransfer);
 
 
 
@@ -67,7 +67,7 @@ router.post('/student_transfer', student_transferController.createStudent_transf
  *       '500':
  *         description: Server error
  */ 
-router.get('/student_transfer/search', student_transferController.searchStudent_transfer);
+router.get('/student_transfer/search', student_transferController.searchStudentTransfer);
 
 
 /**
@@ -82,7 +82,7 @@ router.get('/student_transfer/search', student_transferController.searchStudent_
  *       '500':
  *         description: Server error
  */
-router.get('/student_transfer', student_transferController.getStudent_transfer);
+router.get('/student_transfer', student_transferController.getStudentTransfer);
 
 
 
@@ -107,7 +107,7 @@ router.get('/student_transfer', student_transferController.getStudent_transfer);
  *       '500':
  *         description: Server error
  */
-router.get('/student_transfer/:id', student_transferController.getStudent_transferById);
+router.get('/student_transfer/:id', student_transferController.getStudentTransferById);
 
 
 
@@ -151,7 +151,7 @@ router.get('/student_transfer/:id', student_transferController.getStudent_transf
  *       '500': 
  *         description: Server error
  */
-router.put('/student_transfer/:id', student_transferController.updateStudent_transfer);
+router.put('/student_transfer/:id', student_transferController.updateStudentTransfer);
 
 
 
@@ -176,7 +176,7 @@ router.put('/student_transfer/:id', student_transferController.updateStudent_tra
  *       '500':
  *         description: Server error
  */
-router.delete('/student_transfer/:id', student_transferController.deleteStudent_transfer);
+router.delete('/student_transfer/:id', student_transferController.deleteStudentTransfer);
 
 
 module.exports = router;
