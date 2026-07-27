@@ -24,10 +24,10 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'branch_id',
             as: 'Rooms',
         });
-        // Branches.hasMany(models.Teachers, {
-        //     foreignKey: 'branch_id',
-        //     as: 'Teachers',
-        // });
+        Branches.hasMany(models.Teachers, {
+            foreignKey: 'branch_id',
+            as: 'Teachers',
+        });
     };
 
     return Branches;

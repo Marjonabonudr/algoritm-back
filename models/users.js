@@ -44,18 +44,18 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'role_id',
             as: 'Roles',
         });
-        // Users.hasMany(models.Call_logs, {
-        //     foreignKey: 'user_id',
-        //     as: 'Call_logs',
-        // });
-        // Users.hasMany(models.Payments, {
-        //     foreignKey: 'cashier',
-        //     as: 'Payments',
-        // });
-        // Users.hasMany(models.Teachers, {
-        //     foreignKey: 'user_id',
-        //     as: 'Teachers',
-        // });
+        Users.hasMany(models.Call_logs, {
+            foreignKey: 'user_id',
+            as: 'Call_logs',
+        });
+        Users.hasMany(models.Payments, {
+            foreignKey: 'cashier',
+            as: 'Payments',
+        });
+        Users.hasMany(models.Teachers, {
+            foreignKey: 'user_id',
+            as: 'Teachers',
+        });
     };
 
     return Users;

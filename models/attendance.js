@@ -32,19 +32,19 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Attendance.associate = function(models) {
-        // Attendance.belongsTo(models.Lessons, { 
-        //     foreignKey: 'lesson_id', 
-        //     as: 'lesson' 
-        // });
+        Attendance.belongsTo(models.Lessons, { 
+            foreignKey: 'lesson_id', 
+            as: 'lesson' 
+        });
         Attendance.belongsTo(models.Students, { 
             foreignKey: 'student_id', 
             as: 'student' 
         });
 
-        // Attendance.hasMany(models.Call_logs, { 
-        //     foreignKey: 'attendance_id', 
-        //     as: 'callLogs' 
-        // });
+        Attendance.hasMany(models.Call_logs, { 
+            foreignKey: 'attendance_id', 
+            as: 'callLogs' 
+        });
     };
 
 

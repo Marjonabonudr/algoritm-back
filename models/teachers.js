@@ -49,10 +49,10 @@ module.exports = (sequelize, DataTypes) => {
             as: 'newTransfers' 
         });
         
-        // Teachers.hasMany(models.Ratings, { 
-        //     foreignKey: 'teacher_id', 
-        //     as: 'ratings' 
-        // });
+        Teachers.hasMany(models.Ratings, { 
+            foreignKey: 'teacher_id', 
+            as: 'ratings' 
+        });
         Teachers.hasMany(models.Groups, { 
             foreignKey: 'teacher_id', 
             as: 'groups' 

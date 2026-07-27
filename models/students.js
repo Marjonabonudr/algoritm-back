@@ -33,43 +33,43 @@ module.exports = (sequelize, DataTypes) => {
 
 
     Students.associate = (models) => {
-        // Students.belongsTo(models.parents, { 
-        //     foreignKey: 'parent_id', 
-        //     as: 'parent' 
-        // });
+        Students.belongsTo(models.Parents, { 
+            foreignKey: 'parent_id', 
+            as: 'parent' 
+        });
 
-        // Students.hasMany(models.attendance, { 
-        //     foreignKey: 'student_id', 
-        //     as: 'attendances' 
-        // });
-        // Students.hasMany(models.call_logs, { 
-        //     foreignKey: 'student_id', 
-        //     as: 'callLogs' 
-        // });
-        // Students.hasMany(models.ratings, { 
-        //     foreignKey: 'student_id', 
-        //     as: 'ratings' 
-        // });
-        // Students.hasMany(models.student_groups, { 
-        //     foreignKey: 'student_id', 
-        //     as: 'studentGroups' 
-        // });
-        // Students.hasMany(models.studentTransfer, { 
-        //     foreignKey: 'student_id', 
-        //     as: 'transfers' 
-        // });
-        // Students.hasMany(models.discounts, { 
-        //     foreignKey: 'student_id', 
-        //     as: 'discounts' 
-        // });
-        // Students.hasMany(models.grants, { 
-        //     foreignKey: 'student_id', 
-        //     as: 'grants' 
-        // });
-        // Students.hasMany(models.finance_accounts, { 
-        //     foreignKey: 'student_id', 
-        //     as: 'financeAccounts' 
-        // });
+        Students.hasMany(models.Attendance, { 
+            foreignKey: 'student_id', 
+            as: 'attendances' 
+        });
+        Students.hasMany(models.Call_logs, { 
+            foreignKey: 'student_id', 
+            as: 'callLogs' 
+        });
+        Students.hasMany(models.Ratings, { 
+            foreignKey: 'student_id', 
+            as: 'ratings' 
+        });
+        Students.hasMany(models.StudentGroups, {
+            foreignKey: 'student_id', 
+            as: 'studentGroups' 
+        });
+        Students.hasMany(models.StudentTransfer, { 
+            foreignKey: 'student_id', 
+            as: 'transfers' 
+        });
+        Students.hasMany(models.Discounts, { 
+            foreignKey: 'student_id', 
+            as: 'discounts' 
+        });
+        Students.hasMany(models.Grants, { 
+            foreignKey: 'student_id', 
+            as: 'grants' 
+        });
+        Students.hasMany(models.Finance_accounts, { 
+            foreignKey: 'student_id', 
+            as: 'financeAccounts' 
+        });
     };
 
     

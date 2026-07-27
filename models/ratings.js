@@ -28,10 +28,10 @@ module.exports = (sequelize, DataTypes) => {
     });
  
     Ratings.associate = function(models) {
-        // Ratings.belongsTo(models.Lessons, { 
-        //     foreignKey: 'lesson_id', 
-        //     as: 'lesson' 
-        // });
+        Ratings.belongsTo(models.Lessons, { 
+            foreignKey: 'lesson_id', 
+            as: 'lesson' 
+        });
         Ratings.belongsTo(models.Students, { 
             foreignKey: 'student_id', 
             as: 'student' 

@@ -28,10 +28,10 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Payments.associate = function(models) {
-        // Payments.belongsTo(models.Finance_accounts, { 
-        //     foreignKey: 'finance_account_id', 
-        //     as: 'financeAccount' 
-        // });
+        Payments.belongsTo(models.Finance_accounts, { 
+            foreignKey: 'finance_account_id', 
+            as: 'financeAccount' 
+        });
         Payments.belongsTo(models.Users, { 
             foreignKey: 'cashier', 
             as: 'cashierUser' 

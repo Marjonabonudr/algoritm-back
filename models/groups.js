@@ -48,10 +48,10 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'course_id',
             as: 'Courses',
         });
-        // Groups.belongsTo(models.Teachers, {
-        //     foreignKey: 'teacher_id',
-        //     as: 'Teachers',
-        // });
+        Groups.belongsTo(models.Teachers, {
+            foreignKey: 'teacher_id',
+            as: 'Teachers',
+        });
         Groups.belongsTo(models.Rooms, {
             foreignKey: 'room_id',
             as: 'Rooms',
